@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Firt MVC",
+    "\\Firt MVC\\WebApplication1",
+    "\\Firt MVC\\WebApplication1\\Controllers"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\Firt MVC",
   "PreviewInSolutionExplorer": false
 }
