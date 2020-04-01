@@ -43,13 +43,9 @@ namespace DrugaMVC.Controllers
 
         public ActionResult UporabaModela()
         {
-            Student x = new Student
-            {
-                StudentID = 4,
-                StudentIme = "Piko",
-                Leta = 25
-            };
-            return View();
+            Student x = new Student()
+            { StudentID = 1, StudentIme = "Janez", Leta = 18 };
+            return View(x);
         }
     }
 
