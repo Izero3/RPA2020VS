@@ -9,10 +9,11 @@ namespace DrugaMVC.Controllers
 {
     public class StudentController : Controller
     {
+        List<Student> seznam = new List<Student>();
         // GET: Student
         public ActionResult Index()
         {
-            var seznam = new List<Student>
+            seznam = new List<Student>
             {
                 new Student()
                 {
@@ -46,6 +47,23 @@ namespace DrugaMVC.Controllers
             Student x = new Student()
             { StudentID = 1, StudentIme = "Janez", Leta = 18 };
             return View(x);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            Student x = seznam.Where(a => a.StudentID == id).FirstOrDefault();
+
+            return View(x);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Student a)
+        {
+            Student x = new Student();
+            x.StudentID = a.StudentID;
+            x.StudentIme = a.StudentIme;
+            x.Leta = a.Leta;
+            return RedirectToAction("Index");
         }
     }
 
